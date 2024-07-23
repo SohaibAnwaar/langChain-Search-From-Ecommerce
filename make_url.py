@@ -35,9 +35,9 @@ llm = OpenAI(openai_api_key=openai_api_key, temperature=0.7)
 # Transform user input into a search query
 def generate_search_url(user_input):
     formatted_prompt = prompt.format(input=user_input)
-    print(formatted_prompt)
     response = llm.generate([formatted_prompt])
     search_url = response.generations[0][0].text.strip()
+    search_url = search_url.split('Assistant:')[-1].strip()
     return search_url
 
 # Fetch and display results
@@ -67,15 +67,15 @@ if __name__ == "__main__":
         # Open a new tab and navigate to the search URL
         driver.execute_script(f"window.open('{search_url}', '_blank');")
 
-        # Load HTML
-        loader = AsyncChromiumLoader([search_url])
-        html = loader.load()
+        # # Load HTML
+        # loader = AsyncChromiumLoader([search_url])
+        # html = loader.load()
 
-        # Transform
-        bs_transformer = BeautifulSoupTransformer()
-        docs_transformed = bs_transformer.transform_documents(html, tags_to_extract=["span"])
-        data = docs_transformed[0].page_content[0:500]
-        print(data)
+        # # Transform
+        # bs_transformer = BeautifulSoupTransformer()
+        # docs_transformed = bs_transformer.transform_documents(html, tags_to_extract=["span"])
+        # data = docs_transformed[0].page_content[0:500]
+        # print(data)
 
         input("Press Enter to close the browser...")
 
