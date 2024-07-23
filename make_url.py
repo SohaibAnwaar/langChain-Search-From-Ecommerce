@@ -58,27 +58,30 @@ if __name__ == "__main__":
     search_url = generate_search_url(user_input)
     print(f"Search URL: {search_url}")
 
-    chrome_options = Options()
-    chrome_options.add_argument("--start-maximized")
-    chrome_service = Service(ChromeDriverManager().install())
-    driver = webdriver.Chrome(service=chrome_service, options=chrome_options)
+    try:
+        chrome_options = Options()
+        chrome_options.add_argument("--start-maximized")
+        chrome_service = Service(ChromeDriverManager().install())
+        driver = webdriver.Chrome(service=chrome_service, options=chrome_options)
 
-    # Open a new tab and navigate to the search URL
-    driver.execute_script(f"window.open('{search_url}', '_blank');")
+        # Open a new tab and navigate to the search URL
+        driver.execute_script(f"window.open('{search_url}', '_blank');")
 
-    # Load HTML
-    loader = AsyncChromiumLoader([search_url])
-    html = loader.load()
+        # Load HTML
+        loader = AsyncChromiumLoader([search_url])
+        html = loader.load()
 
-    # Transform
-    bs_transformer = BeautifulSoupTransformer()
-    docs_transformed = bs_transformer.transform_documents(html, tags_to_extract=["span"])
-    data = docs_transformed[0].page_content[0:500]
-    print(data)
+        # Transform
+        bs_transformer = BeautifulSoupTransformer()
+        docs_transformed = bs_transformer.transform_documents(html, tags_to_extract=["span"])
+        data = docs_transformed[0].page_content[0:500]
+        print(data)
 
-    input("Press Enter to close the browser...")
+        input("Press Enter to close the browser...")
 
-    driver.quit()
+        driver.quit()
+    except Exception as e:
+        print(str(e))
 
 # Get search results
 # search_results = fetch_search_results(search_url)
