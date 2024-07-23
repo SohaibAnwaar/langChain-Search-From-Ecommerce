@@ -1,7 +1,14 @@
 # Dentaltix Product Search - Backend
 
-Backend for Dentaltix Product Search, a system for querying product information from the Dentaltix website.
-
+<div>
+    <a href="https://www.loom.com/share/20f9a3b333b94f0a9e5d8bcc657f76ef">
+      <p>Code - make_url.py — TGL - 23 July 2024 - Watch Video</p>
+    </a>
+    <a href="https://www.loom.com/share/20f9a3b333b94f0a9e5d8bcc657f76ef">
+      <img style="max-width:300px;" src="https://cdn.loom.com/sessions/thumbnails/20f9a3b333b94f0a9e5d8bcc657f76ef-41f05647d0bf8ff4-full-play.gif">
+    </a>
+  </div>
+  
 ### Required Versions and Packages
 - Python 3.12 or higher
 - LangChain (latest version)
@@ -61,4 +68,4 @@ The application will generate a search URL and open it in a new Chrome tab.
 ### Loom Video
 For a detailed walkthrough of the project and setup instructions, check out the Loom video:
 
-<iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.loom.com/share/20f9a3b333b94f0a9e5d8bcc657f76ef?sid=5662e18c-edd7-4836-95da-b948adfc0630" style="border: 1px solid black"></iframe>
+
