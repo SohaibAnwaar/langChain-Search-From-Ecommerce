@@ -30,7 +30,10 @@ source env/bin/activate
 pip install -r requirements.txt
 ```
 ### Then run manullay this command on terminal:
-```playwright install```
+```
+playwright install
+
+```
 
 ### Set up environment variables:
 
