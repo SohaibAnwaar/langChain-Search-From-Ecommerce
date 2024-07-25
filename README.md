@@ -1,10 +1,10 @@
 # Dentaltix Product Search - Backend
 
 <div>
-    <a href="https://www.loom.com/share/20f9a3b333b94f0a9e5d8bcc657f76ef">
+    <a href="https://www.loom.com/share/d05b237659a0494f814b116921c55c77">
       <p>Code - make_url.py — TGL - 23 July 2024 - Watch Video</p>
     </a>
-    <a href="https://www.loom.com/share/20f9a3b333b94f0a9e5d8bcc657f76ef">
+    <a href="https://www.loom.com/share/d05b237659a0494f814b116921c55c77">
       <img style="max-width:300px;" src="https://cdn.loom.com/sessions/thumbnails/20f9a3b333b94f0a9e5d8bcc657f76ef-41f05647d0bf8ff4-full-play.gif">
     </a>
   </div>
